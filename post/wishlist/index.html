@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>25岁后愿望单</title>
+	
+	<meta name="description" content="">
+	<meta name="image" content="">
+	
+	<meta itemprop="name" content="25岁后愿望单">
+	<meta itemprop="description" content="">
+	<meta itemprop="image" content="">
+	<link rel="stylesheet" type="text/css" href="/css/style.css?v=20180802.1">
+
+</head>
+<body>
+<header >
+	<a href="/" style="float: left;color:#777;"><strong>Only Shui</strong>
+	</a>
+	<a href="/index.xml" style="color:#777;float: left;"><strong>
+		&nbsp;
+	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg>
+</strong></a>
+<a href="https://blog.adu.im/about/" style="color:#777;"><strong>About</strong></a>
+
+</header>
+
+
+<div id="loadingMask" style="width: 100%; height: 100%; position: fixed; background: #fff;"></div>
+<script>
+function fadeOut(el) {
+  el.style.opacity = 1;
+
+  var last = +new Date();
+  var tick = function() {
+    el.style.opacity = +el.style.opacity - (new Date() - last) / 80;
+    last = +new Date();
+    
+
+    if (el.style.opacity > 0) {
+      (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
+    } else {
+    	el.style.display='none';
+    }
+  };
+
+  tick();
+}
+
+function ready(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+         el = document.getElementById('loadingMask');
+         fadeOut(el);
+        var elements = document.querySelectorAll("img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("alt")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("alt"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+
+    } else {
+        document.addEventListener('DOMContentLoaded', fn);
+    }
+}
+window.onload = ready;
+</script>
+
+<div class="content">
+	<h1>25岁后愿望单 <aside></aside></h1>
+	<p>从来没想到25岁后会这样过。<br />
+最大的愿望：<strong>希望自己至少再活三个25岁</strong>。</p>
+
+<hr />
+
+<p><strong>2018</strong></p>
+
+<ul class="task-list">
+<li><label><input type="checkbox" disabled class="task-list-item"> 一段卡农</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> 一段《月光の云海》</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> <a href="/post/a-breakup-travel/">骑行</a></label></li>
+</ul>
+
+</div>
+
+
+
+
+	<p><small><em>Written July 6, 2018. </em>
+		
+	</small></p>
+
+	<p>
+	
+	
+	</p>
+
+
+
+
+
+
+<footer>
+	<p>“最恨的就是那个天使，那么久都不来见我一次。” - <em>Only Shui</em></p>
+	<p style="font-size:75%">Powered by <a href="https://github.com/gohugoio/hugo">Hugo</a> & <a href="https://github.com/schollz/onetwothree">onetwothree</a>. Licensed under <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+</footer>
+</body>
+</html>
+
